@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cedarville+Cursive&family=Lexend:wght@100..900&family=Mansalva&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Shadows+Into+Light+Two&display=swap');
+
+/* 
+    Font's Note:
+    font-family: "Lexend", sans-serif;
+    font-family: "Nunito", sans-serif;
+    font-family: "Caveat", cursive;
+    font-family: "Shadows Into Light Two", cursive;
+    font-family: "Cedarville Cursive", cursive;
+    font-family: "Mansalva", sans-serif;
+*/
+
+:root {
+    --primary-color: #454be9;
+    --secondary-color: #def447;
+    --bg-color: #fff;
+    --text-color: #040404;
+    --width: 15vw;
+    --height: 3.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+p {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* NAVBAR SECTION */
+header {
+    position: fixed;
+    top: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.6rem 0.6rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 1000px;
+    border: 0.2rem solid var(--text-color);
+    background-color: var(--bg-color);
+    z-index: 1000;
+    width: fit-content;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container a {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--bg-color);
+    text-decoration: none;
+    padding: 0.5em 1.6em;
+    border-radius: 1000px;
+    border: 0.2rem solid var(--text-color);
+    white-space: nowrap;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    background-color: transparent;
+}
+
+.container a.recom {
+    background-color: var(--primary-color);
+}
+
+.container a.home {
+    color: var(--text-color);
+    border-color: transparent;
+}
+
+.container a.home:hover {
+    color: var(--secondary-color);
+    /* color: var(--primary-color); */
+    /* border-color: var(--text-color); */
+}
+
+/* WEBSITE SECTION */
+.website {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.website .website-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 2rem;
+    border-radius: 20px 80px 20px 80px;
+    border: 0.2rem solid var(--text-color);
+    gap: 2rem;
+    justify-content: center;
+    animation: wave infinite 3s ease-in-out;
+}
+
+.card-container {
+    /* background-color: #454be9;/ */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card a {
+    padding: 1rem 1.5rem;
+    border: 0.2rem solid var(--text-color);
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+}
+
+.card a:hover {
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+}
+
+/* WEBTOON */
+.comic-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.webtoon {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 2rem;
+    border-radius: 100px 100px 0 0;
+    border: 0.2rem solid var(--text-color);
+    border-bottom: transparent;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.webtoon1 {
+    width: 100%;
+    padding: 3em;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+}
+
+.webtoon1 a {
+    padding: 1rem;
+    border-radius: 40px;
+    background-color: var(--primary-color);
+    border: 0.2rem solid var(--text-color);
+    animation: wave infinite 3s ease-in-out;
+}
+
+.webtoon1 a img {
+    width: 25vw;
+    height: 34vh;
+    object-fit: cover;
+    border-radius: calc(40px - 1rem);
+    border: 0.2rem solid var(--text-color);
+}
+
+.webtoon1 .text {
+    display: flex;
+    flex-direction: column;
+    transform: rotate(2deg);
+    width: 40%;
+    padding: 2rem;
+    border-radius: 10px 60px 60px 60px;
+    border: 0.2rem solid var(--text-color);
+    gap: 1em;
+    justify-content: center;
+    animation: autoShowRight both;
+    animation-timeline: view(70% 5%);
+}
+
+.webtoon2 {
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+}
+
+.webtoon2 a {
+    padding: 1rem;
+    border-radius: 40px;
+    background-color: var(--secondary-color);
+    border: 0.2rem solid var(--text-color);
+    animation: wave infinite 3s ease-in-out;
+}
+
+.webtoon2 a img {
+    width: 25vw;
+    height: 34vh;
+    object-fit: cover;
+    border-radius: calc(40px - 1rem);
+    border: 0.2rem solid var(--text-color);
+}
+
+.webtoon2 .text {
+    display: flex;
+    flex-direction: column;
+    transform: rotate(2deg);
+    width: 40%;
+    padding: 2rem;
+    border-radius: 60px 10px 60px 60px;
+    border: 0.2rem solid var(--text-color);
+    gap: 1em;
+    justify-content: center;
+    animation: autoShowLeft both;
+    animation-timeline: view(70% 5%);
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    padding: 0.6rem;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-top: 0.2rem solid var(--text-color);
+}
+
+/* KEYFRAMES */
+@keyframes autoRun {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
+
+@keyframes autoShowLeft {
+    from {
+        opacity: 0;
+        transform: translateX(8vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes autoShowRight {
+    from {
+        opacity: 0;
+        transform: translateX(-8vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes autoShow {
+    from {
+        opacity: 0;
+        transform: translateY(10vw) scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: translatY(0) scale(1);
+    }
+}
+
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes wave {
+    50% {
+        transform: translateY(10px)
+    }
+}

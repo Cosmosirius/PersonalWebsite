@@ -104,7 +104,7 @@ header {
   height: 100vh;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 0rem;
   background-color: var(--primary-color);
 }
 
@@ -112,10 +112,12 @@ header {
   font-weight: 900;
   font-size: 12vh;
   color: var(--bg-color);
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease-out forwards;
 }
 
 .hero .kass {
-  font-size: 18vh;
+  font-size: 20vh;
   color: var(--secondary-color);
   font-family: "Caveat", cursive;
 }
@@ -171,6 +173,7 @@ header {
   background-color: var(--primary-color);
   border: 0.2rem solid var(--text-color);
   transform: rotate(-5deg);
+  animation: wave infinite 3s ease-in-out;
 }
 
 .profile a img {
@@ -189,6 +192,8 @@ header {
   border: 0.2rem solid var(--text-color);
   gap: 1em;
   justify-content: center;
+  animation: autoShowLeft both;
+  animation-timeline: view(70% 5%);
 }
 
 /* QUOTE SECTION */
@@ -208,6 +213,8 @@ header {
   border-radius: 40px;
   background-color: var(--secondary-color);
   border: 0.2rem solid var(--text-color);
+  animation: autoShow both;
+  animation-timeline: view(70% 5%);
 }
 
 .quotes-container .quotes .quo {
@@ -253,6 +260,8 @@ header {
   border: 0.2rem solid var(--text-color);
   border-bottom: transparent;
   gap: 2rem;
+  animation: autoShow both;
+  animation-timeline: view(70% 5%);
 }
 
 .container-sosmed .sosmed .button a {
@@ -288,7 +297,7 @@ header {
 }
 
 .container-sosmed .sosmed .button .ig:hover {
-  background-color: var(--bg-color);
+  background-color: var(--text-color);
   color: var(--secondary-color);
 }
 
@@ -298,7 +307,7 @@ header {
 }
 
 .container-sosmed .sosmed .button .github:hover {
-  background-color: var(--bg-color);
+  background-color: var(--text-color);
   color: var(--secondary-color);
 }
 
@@ -322,4 +331,43 @@ footer {
   to {
     left: calc(var(--width) * -1);
   }
+}
+
+@keyframes autoShowLeft {
+  from {
+    opacity: 0;
+    transform: translateX(10vw);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes autoShow {
+  from {
+    opacity: 0;
+    transform: translateY(10vw) scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: translatY(0) scale(1);
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wave {
+    50% { transform: translateY(20px) }
 }
